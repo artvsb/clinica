@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,5 +32,11 @@ public class Medico {
 
     @Column(name = "email")
     private String email;
+
+    @Column(name = "atende_convenio")
+    private Boolean atendeConvenio;
+
+    @Column(name = "valor_consulta", nullable = false)
+    private BigDecimal valorConsulta;
 
 }

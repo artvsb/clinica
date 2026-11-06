@@ -47,4 +47,10 @@ public class MedicoController {
         medicoService.atualizar(id, medicoAtualizado);
     }
 
+    @PatchMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void editar(@PathVariable Long id, @RequestBody Medico medicoAtualizado) {
+        medicoService.editar(id, medicoAtualizado);
+    }
+
 }
