@@ -18,7 +18,7 @@ public class ConsultaController {
     private final ConsultaService consultaService;
 
     @PostMapping
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public ConsultaResponseDTO agendar(ConsultaRequestDTO dto) {
         return consultaService.agendar(dto);
     }
